@@ -2,9 +2,9 @@ import React from "react";
 
 
 const Semaforo = () => {
-    const [encendido, setEncendido] = useState("red")
+    const [prendido, setPrendido] = useState("red")
     const changeColor = (color) => {
-        setEncendido(color)
+        setPrendido(color)
     }
     return (
         <main>
@@ -12,12 +12,22 @@ const Semaforo = () => {
             <div className="box">
                 <div
                     onClick={()=> changeColor("red")}
-                    className={`red ${encendido == "red" ? "light-on" : ""}`}>
+                    className={`red ${prendido == "red" ? "light-on" : ""}`}>
                 </div>
                 <div
                     onClick={() => changeColor("yellow")}
-                    className={`yellow ${encendido == "yellow" ? "light-on" : ""}`}>
+                    className={`yellow ${prendido == "yellow" ? "light-on" : ""}`}>
                 </div>
+                 <div
+                    onClick={() => changeColor("green")}
+                    className={`green ${prendido == "green" ? "light-on" : ""}`}>
+                </div>
+                </div>
+                </main>
+                );
+            };
+    export default Semaforo;
+
 
 
 
