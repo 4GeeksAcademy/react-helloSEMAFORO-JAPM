@@ -25,5 +25,7 @@ const Semaforo = () => {
                 </div>
                 </main>
                 );
+
             };
+            
     export default Semaforo;
